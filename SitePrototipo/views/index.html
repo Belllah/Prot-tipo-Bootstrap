@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protótipo Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+
+<body>
+    <!--Cria o cabeçalho da página, alinhado ao centro, com padding e sombra.-->
+    <header class="text-center py-3 shadow-sm">
+    <div class="container d-flex justify-content-between align-items-center">
+        <!-- 1. Logo -->
+        <a href="/public/img/logo.jpg" class="logo">
+            <!-- LOGO GRANDE (Desktop - d-md-block) -->
+            <img src="/public/img/logo.jpg" alt="Logo RPG" class="d-none d-md-block">
+            <!-- LOGO PEQUENA (Mobile - d-md-none) -->
+            <img src="/public/img/logo.jpg" alt="Logo RPG Mobile" class="d-block d-md-none">
+        </a>
+        
+        <!-- 2. Título Centralizado -->
+        <h1 class="fw-bold m-0 flex-grow-1">
+            RPG - O Chamado das Correntes
+        </h1>
+        
+        <!-- Elemento de Espaçamento  mesma largura da logo para centralizar o título) -->
+        <!-- Desktop: 120px de largura -->
+        <div style="width: 120px;" class="d-none d-md-block"></div>
+        <!-- Mobile: 80px de largura -->
+        <div style="width: 80px;" class="d-block d-md-none"></div>
+    </div>
+</header>
+
+    <!--Cria uma sessão com margem e imagem responsiva (ajusta tamanho conforme a tela).-->
+    <section class="container my-4 banner fade-in">
+        <img src="/public/img/banner1.jpg" alt="banner oceano" class="img-fluid rounded-4 shadow">
+    </section>
+
+    <!--Cria uma sessão com texto explicativo, dividido em duas colunas, uma para o texto e outra para img.-->
+    <section class="container my-5 fade-in">
+        <h2 class="fw-bold mb-3 text-center">Marulhar das Águas: Ecos do Abismo</h2>
+        <div class="row align-items-center">
+            <div class="col-md-6 order-md-1">
+                <h4 class="mb-3">A jornada começa nas águas esquecidas...</h4>
+                <p>
+                    Em <strong>“Marulhar da Águas: Ecos do Abismo”</strong>, os jogadores assumem o papel de
+                    aventureiros que exploram os
+                    segredos submersos de um mundo oceânico em ruínas.
+                    Cidades de coral, templos afundados e criaturas antigas aguardam sob as ondas. Cada escolha molda o
+                    equilíbrio entre as forças do mar e da superfície, revelando mistérios há muito enterrados.
+                    Entre correntes traiçoeiras e tempestades encantadas,
+                    heróis podem unir-se a sereias guerreiras, piratas amaldiçoados
+                    ou guardiões das marés. As habilidades evoluem conforme o vínculo cresce, permitindo controlar
+                    correntes, convocar criaturas marinhas e desvendar relíquias esquecidas.
+
+                </p>
+            </div>
+            <div class="col-md-6 order-md-2 placeholder-img">
+                <img src="/public/img/banner2.jpg" alt="banner dragão e oceano" class="img-fluid rounded-4 shadow">
+
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12">
+                <p>
+                    Com narrativa dinâmica e combates estratégicos, “Ecos do Abismo” convida você a mergulhar em um
+                    universo onde a verdadeira força vem das profundezas. Afinal, no mar, <strong>até o silêncio tem
+                        voz.</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!--Cria os cards dos personagens-->
+
+    <section class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-6 col-md-3">
+                    <div class="card bg-secondary border-0 text-center p-3 h-100 dark-card-img">
+                        <img src="/public/img/card1.jpg" alt="Orion personagem" class="img-fluid rounded-3 mb-3">
+                        <p class="mb-0 small"><strong>ORION</strong> o Capitão Perdido. Lenda das marés e mestre da
+                            navegação.
+                            <strong>Habilidades:</strong>
+                            Chamado do Abismo (invoca espíritos da tripulação), Tiro Estelar (dano à distância), Névoa
+                            Fantasma (camuflagem temporária).
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="col-6 col-md-3">
+                    <div class="card bg-secondary border-0 text-center p-3 h-100 dark-card-img">
+                        <img src="/public/img/card2.jpg" alt="Sombra personagem" class="img-fluid rounded-3 mb-3">
+                        <p class="mb-0 small"><strong>SOMBRA</strong> A Nereida das correntezas.Criatura das águas
+                            obscuras, misteriosa,
+                            veloz, e quase impossível de capturar.
+                            <strong>Habilidades:</strong>
+                            Canto das Marés (confunde inimigos), Corrente Oculta (teleporte curto), Toque do Vazio
+                            (ataque mágico drenante).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <div class="card bg-secondary border-0 text-center p-3 h-100 dark-card-img">
+                        <img src="/public/img/card3.jpg" alt="Kael personagem" class="img-fluid rounded-3 mb-3">
+                        <p class="mb-0 small"><strong>KAEL</strong> O Caçador Marinho. Um guerreiro solitário que domina
+                            as correntes e
+                            caça monstros lendários.
+                            <strong>Habilidades:</strong>
+                            Lança Abissal (ataque perfurante), Caçador das Profundezas (aumenta dano em monstros),
+                            Instinto Oceânico (detecção de inimigos ocultos).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <div class="card bg-secondary border-0 text-center p-3 h-100 dark-card-img">
+                        <img src="/public/img/card4.jpg" alt="Orion personagem" class="img-fluid rounded-3 mb-3">
+                        <p class="mb-0 small"><strong>LUMA</strong> A Guardiã dos corais. Protetora dos recifes e da
+                            vida marinha.
+                            <strong>Habilidades:</strong>
+                            Luz das Profundezas (cura em área), Escudo de Coral (defesa mágica), Maré Viva (revitaliza
+                            aliados próximos).
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Cria os cards dos mascotes com flipped-->
+
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-6 col-md-3">
+                    <div class="flip-card" onclick="flipCard(this)">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front card border-0 shadow-sm text-center py-4 light-card-img">
+                                <img src="/public/img/card1.1.jpg" alt="Dragon" class="img-fluid rounded-3">
+                            </div>
+                            <div class="flip-card-back card border-0 shadow-sm text-center py-4 bg-info text-white">
+                                <p class="px-3"> Criatura mística ligada à Sombra, nascida nas fendas do abismo. Sua
+                                    presença distorce a própria água.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <div class="flip-card" onclick="flipCard(this)">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front card border-0 shadow-sm text-center py-4 light-card-img">
+                                <img src="/public/img/card2.2.jpg" alt="Arraia" class="img-fluid rounded-3">
+                            </div>
+                            <div class="flip-card-back card border-0 shadow-sm text-center py-4 bg-info text-white">
+                                <p class="px-3">Companheira de Kael, desliza como sombra sob as águas, atacando com
+                                    precisão silenciosa. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <div class="flip-card" onclick="flipCard(this)">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front card border-0 shadow-sm text-center py-4 light-card-img">
+                                <img src="/public/img/card3.3.jpg" alt="golfinho" class="img-fluid rounded-3">
+                            </div>
+                            <div class="flip-card-back card border-0 shadow-sm text-center py-4 bg-info text-white">
+                                <p class="px-3"> Aliada ágil de Orion, guia o capitão através das névoas. Seu canto ecoa
+                                    entre os portos perdidos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <div class="flip-card" onclick="flipCard(this)">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front card border-0 shadow-sm text-center py-4 light-card-img">
+                                <img src="/public/img/card4.4.jpg" alt="Turttle" class="img-fluid rounded-3">
+                            </div>
+                            <div class="flip-card-back card border-0 shadow-sm text-center py-4 bg-info text-white">
+                                <p class="px-3"> Companheira leal de Luma, move-se lentamente, mas carrega a força dos
+                                    recifes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--FAQ-->
+
+    <section class="container my-5 fade-in">
+        <h2 class="fw-bold mb-5 text-center">Tire as suas Dúvidas</h2>
+
+        <div class="accordion" id="faqAccordion">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed btn-ocean" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Qual é o principal objetivo do jogo?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>
+                            O principal objetivo é promover a <strong>conscientização</strong> sobre a importância dos
+                            oceanos e da vida marinha,
+                            por meio de uma aventura interativa e educativa.
+                            Confira um exemplo de inspiração no documentário:
+                            <a href="https://youtu.be/sClXYxopbAE?si=5m_u-MNwUNicytJI" target="_blank">assista aqui</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed btn-ocean" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Quem pode se juntar à jornada?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>
+                            Qualquer jogador interessado em RPGs de mesa ou narrativos. Nosso sistema é amigável para
+                            iniciantes e
+                            profundo o suficiente para veteranos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed btn-ocean" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        O que significa a palavra "marulhar"?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>
+                            <strong>Marulhar</strong> é o som suave das ondas do mar ao se encontrarem com a areia ou as
+                            rochas — um som tranquilo que simboliza <strong>harmonia e conexão com a natureza</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed btn-ocean" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Qual o sistema de regras utilizado?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>
+                            Utilizamos um sistema de d6 modificado, focado na narrativa e nas escolhas morais dos
+                            personagens,
+                            priorizando a imersão.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--Rodapé com referências-->
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+
+                <div class="col-md-6 text-center text-md-start">
+                    <div class="d-flex justify-content-center justify-content-md-start align-items-center mb-2">
+                        <span class="me-3">Contato:</span>
+                        <div>
+                            <small class="d-block">isabelladoliveira.pro@gmail.com</small>
+                            <small class="d-block">(00) 9999-9999</small>
+                        </div>
+                    </div>
+                    <p class="mb-0 small">© 2025 - Imagens e textos criados com auxílio de IA.
+                        Documentário educacional de recomendação - realizado por alunos do IFSP.</p>
+                </div>
+
+                <div class="col-md-2 d-none d-md-block">
+                </div>
+
+                <div class="col-md-4 text-center text-md-end">
+                    <a href="#" class="text-white mx-2 fs-4"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white mx-2 fs-4"><i class="bi bi-facebook"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><!-- Link Bootstrap-->
+    <script src="https://kit.fontawesome.com" crossorigin="anonymous"></script> <!--Link da img dos ícones-->
+    <script src="/public/js/script.js"></script> <!--Importa o arquivo personalizado da função flipped-->
+
+</body>
+</html>

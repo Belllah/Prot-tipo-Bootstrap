@@ -1,0 +1,325 @@
+/*Base e fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Gradiente e Animação de Fundo */
+    background: linear-gradient(-45deg, #0a1a2f, #132c46, #1e3a8a, #2dd4bf);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    color: #e0f2fe;
+    /* Cor do texto principal */
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/*Tipografia*/
+
+h1,
+h2 {
+    font-family: 'Cinzel Decorative', serif;
+    color: #e4ddc4;
+    text-shadow: 0 0 12px rgba(12, 11, 9, 0.5);
+}
+
+h3,
+h4 {
+    font-family: 'Cinzel Decorative', serif;
+    color: #eab308;
+    text-shadow: 0 0 12px rgba(234, 179, 8, 0.5);
+}
+
+p {
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+.bg-light p {
+    color: #cddaee;
+}
+
+/*Estrutura da página*/
+header {
+    background-color: rgba(39, 139, 139, 0.85);
+    color: #eab308;
+    text-shadow: 0 0 10px rgba(234, 179, 8, 0.6);
+    border-bottom: 2px solid #2dd4bf;
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+}
+
+.logo img {
+    max-width: 120px;
+    /* Desktop */
+    height: auto;
+    display: block;
+    border-radius: 20px;
+}
+
+.logo img {
+    max-width: 80px;
+    /* Mobile */
+    margin: 0 auto;
+    border-radius: 20px;
+
+}
+
+footer {
+    background-color: #0a1a2f !important;
+    border-top: 2px solid #2dd4bf;
+}
+
+/*Estilos de base para todas as imagens*/
+.banner img,
+.placeholder-img img,
+.dark-card-img img,
+.light-card-img img,
+.footer-img-item {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+/*Cards e Accordions para o FAQ*/
+.card {
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(45, 212, 191, 0.4);
+    border-radius: 15px;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+}
+
+.bg-light .card {
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    color: #1e293b;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 25px rgba(45, 212, 191, 0.6);
+    border-color: #22d3ee;
+}
+
+.accordion {
+    --bs-accordion-border-width: 0;
+    --bs-accordion-border-radius: 0;
+    --bs-accordion-bg: transparent;
+}
+
+.accordion-item {
+    background-color: transparent;
+    border: none;
+}
+
+.accordion-item:not(:first-of-type) {
+    border-top: 0;
+}
+
+.accordion-button {
+    background: transparent;
+    color: #e0f2fe;
+    font-weight: 600;
+    padding: 1rem 0;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(45, 212, 191, 0.4);
+    transition: all 0.3s ease;
+}
+
+.accordion-button:hover,
+.accordion-button:focus {
+    background: rgba(45, 212, 191, 0.1);
+    color: #eab308;
+    border-color: #2dd4bf;
+    outline: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: #eab308;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23eab308'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button.collapsed::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%232dd4bf'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-body {
+    color: #cbd5e1;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(45, 212, 191, 0.4);
+    padding-bottom: 1rem;
+}
+
+/*Flip Card*/
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    perspective: 1000px;
+    cursor: pointer;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    /* Correção: Ativa o flip no hover do container */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    /* Mantendo uma altura definida para que a rotação 3D funcione */
+    height: 250px;
+    transition: transform 0.7s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    /* ESSENCIAL: Manter absoluto para o efeito 3D */
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    top: 0;
+    left: 0;
+    transform: translateZ(0);
+}
+
+.flip-card-front {
+    background-color: #f8fafc;
+    z-index: 2;
+}
+
+.flip-card-back {
+    background: linear-gradient(135deg, #293350, #0e1c69);
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+/*Animações*/
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*Responsividade*/
+@media (max-width: 767.98px) {
+
+    .banner img,
+    .placeholder-img img,
+    .dark-card-img img,
+    .light-card-img img {
+        width: 100%;
+        height: auto;
+        max-height: 250px;
+        /* Limite de altura para imagens no mobile */
+        border-radius: 12px;
+        margin-bottom: 1rem;
+    }
+
+    .placeholder-img img {
+        float: none;
+        margin: 0 auto 1rem auto;
+    }
+
+    .text-md-start,
+    .text-md-end {
+        text-align: center !important;
+    }
+
+    /* Ajuste para Flip Card no Mobile */
+    .flip-card-inner {
+        height: auto;
+        min-height: 150px;
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+        position: relative;
+    }
+}
+
+
+/*Tamanhos fixos para Desktop*/
+@media (min-width: 768px) {
+
+    /* 1. Banner (1216x351) */
+    .banner img {
+        width: 100%;
+        max-width: 1216px;
+        height: 351px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* 2. Segundo Banner (592x389) */
+    .placeholder-img img {
+        width: 592px;
+        height: 389px;
+        float: right;
+        margin-left: 20px;
+    }
+
+    /* 3. Quatro Primeiros Cards (279x398) */
+    .dark-card-img img {
+        width: 279px;
+        height: 398px;
+        margin: 0 auto;
+    }
+
+    /* 4. Outros Quatro Cards (279x186) */
+    .light-card-img img,
+    .flip-card-front img {
+        /* Incluído para cards viráveis */
+        width: 279px;
+        height: 186px;
+        margin: 0 auto;
+    }
+
+    /* Imagens do footer */
+    footer .footer-img-item {
+        width: 100%;
+        height: 120px;
+    }
+}
